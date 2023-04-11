@@ -9,6 +9,12 @@ app.use(cors());
 app.use("/public/images", express.static("./public/images"));
 app.use(express.json());
 
+app.use(function (req, res, next) {
+	res.header("Access-Control-Allow-Origin", "https://skill-seeker.com");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	next();
+});
+
 app.use("/api", routes);
 
 // Add route for base URL
