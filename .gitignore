@@ -1,0 +1,25 @@
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# build output
+/dist
+/build
+/out
+
+# logs
+*.log
+
+# misc
+.env
+.DS_Store
+.env.local
+.env.*.local
+*.swp
+Thumbs.db
+.DS_Store?
+.DS_Store!
+
+/ssl
