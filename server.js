@@ -10,7 +10,11 @@ app.use("/public/images", express.static("./public/images"));
 app.use(express.json());
 
 app.use(function (req, res, next) {
-	res.header("Access-Control-Allow-Origin", "https://skill-seeker.com");
+	const allowedOrigins = ["https://skill-seeker.com", "https://www.skill-seeker.com", "https://skill-seeker.netlify.app", "https://www.skill-seeker.netlify.app"];
+	const origin = req.headers.origin;
+	if (allowedOrigins.includes(origin)) {
+		res.header("Access-Control-Allow-Origin", origin);
+	}
 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	next();
 });
