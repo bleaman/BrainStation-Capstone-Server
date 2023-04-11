@@ -1,5 +1,5 @@
 ﻿<h1>Skill Seeker API</h1>
-<p>Skill Seeker API is a RESTful API that provides users the ability to leave comments and likes for businesses. The API is built with Node.js, Express and MySQL.</p>
+<p>Skill Seeker API is a RESTful API that provides users the ability to log into an account and leave comments and likes for businesses. The API is built with Node.js, Express and MySQL.</p>
 <p>The API uses JSON Web Tokens (JWT) for authentication and authorization. To access any protected route, you need to send a valid token in the Authorization header with the format "Bearer token". You can obtain a token by logging in with an existing user account. If you do not have an account you must first create one.</p>
 <p>The front end for this project as well as a more in-depth readme can be found at https://github.com/bleaman/BrainStation-Capstone-Client</p>
 <h2>Users routes</h2>
