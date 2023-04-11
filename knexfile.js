@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 module.exports = {
-	client: "mysql",
+	client: "mysql2",
 	connection: {
 		charset: "utf8mb4",
 		host: process.env.DB_LOCAL_HOST,
