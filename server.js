@@ -11,6 +11,11 @@ app.use(express.json());
 
 app.use("/api", routes);
 
+// Add route for base URL
+app.get("/", (req, res) => {
+	res.send("Welcome to Skill Seeker API");
+});
+
 app.listen(port, () => {
 	console.log(`App listening on port ${port}`);
 });
