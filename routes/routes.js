@@ -51,4 +51,7 @@ router.route("/users/:user_id/comments").get(verifyToken, commentsController.get
 // Get likes by business id and like business route
 router.route("/business/:business_id/likes").get(verifyToken, businessController.getLikesByBusinessId).post(verifyToken, businessController.likeBusiness);
 
+// Get is user an admin route
+router.route("/admin").get(verifyToken, usersController.getIsAdmin);
+
 module.exports = router;

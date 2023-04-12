@@ -295,3 +295,20 @@ exports.resetPassword = async (req, res) => {
 		return res.status(500).json({ message: "An error occurred when trying to reset password." });
 	}
 };
+
+exports.getIsAdmin = async (req, res) => {
+	try {
+		const user = await knex("user").select().where("id", req.userId).first();
+		const apiAdmin = user.api_admin;
+		let isAdmin = false;
+		if (apiAdmin) {
+			isAdmin = true;
+		}
+
+		const responseObject = { isAdmin };
+		return res.json(responseObject);
+	} catch (err) {
+		console.error(err);
+		return res.status(500).json({ message: "An error occurred when trying to verify comment ownership." });
+	}
+};
