@@ -298,7 +298,7 @@ exports.resetPassword = async (req, res) => {
 
 exports.getIsAdmin = async (req, res) => {
 	try {
-		const user = await knex("user").select().where("id", req.userId).first();
+		const user = await knex("users").select().where("id", req.userId).first();
 		const apiAdmin = user.api_admin;
 		let isAdmin = false;
 		if (apiAdmin) {
